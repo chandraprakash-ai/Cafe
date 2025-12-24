@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Montserrat:wght@400;600;800&display=swap');
+
+:root {
+    --ng-primary: #FF4757;
+    /* Spicy Red */
+    --ng-secondary: #2ED573;
+    /* Fresh Mint/Teal */
+    --ng-accent: #FFA502;
+    /* Turmeric Yellow */
+    --ng-dark: #2F3542;
+    --ng-light: #FFFFFF;
+    --ng-off-white: #F1F2F6;
+    --ng-border: 4px solid var(--ng-dark);
+    --ng-shadow: 8px 8px 0px var(--ng-dark);
+}
+
+.ng-page {
+    background-color: var(--ng-off-white);
+    color: var(--ng-dark);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* --- Navigation --- */
+.ng-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.ng-nav.scrolled {
+    background: var(--ng-light);
+    border-bottom: var(--ng-border);
+    padding: 1rem 3rem;
+}
+
+.ng-logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--ng-primary);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 0px var(--ng-dark);
+    transform: rotate(-2deg);
+}
+
+.ng-logo span {
+    color: var(--ng-secondary);
+}
+
+.ng-nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.ng-link {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--ng-dark);
+    cursor: pointer;
+    position: relative;
+    padding: 0.5rem 1rem;
+    background: var(--ng-light);
+    border: 2px solid var(--ng-dark);
+    box-shadow: 4px 4px 0px var(--ng-dark);
+    transition: all 0.2s ease;
+}
+
+.ng-link:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--ng-dark);
+    background: var(--ng-accent);
+}
+
+.ng-link:active {
+    transform: translate(0, 0);
+    box-shadow: 0px 0px 0px var(--ng-dark);
+}
+
+/* --- Hero Section --- */
+.ng-hero {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    /* nav height */
+    background: radial-gradient(circle at 60% 50%, #fff 20%, #f1f2f6 80%);
+    overflow: hidden;
+}
+
+/* Graphic shapes in background */
+.ng-hero::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 60vh;
+    height: 60vh;
+    background: var(--ng-accent);
+    border-radius: 50%;
+    border: var(--ng-border);
+    z-index: 0;
+}
+
+.ng-hero::after {
+    content: "";
+    position: absolute;
+    bottom: -5%;
+    left: -5%;
+    width: 40vh;
+    height: 40vh;
+    background: var(--ng-secondary);
+    z-index: 0;
+    transform: rotate(45deg);
+    border: var(--ng-border);
+}
+
+.ng-hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.ng-badge {
+    background: var(--ng-dark);
+    color: var(--ng-light);
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    transform: rotate(-3deg);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.ng-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 6rem;
+    line-height: 0.9;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--ng-primary);
+    margin-bottom: 2rem;
+    text-shadow: 6px 6px 0px var(--ng-dark);
+    -webkit-text-stroke: 3px var(--ng-dark);
+}
+
+.ng-title .outline {
+    color: transparent;
+    -webkit-text-stroke: 3px var(--ng-dark);
+    text-shadow: none;
+}
+
+.ng-description {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    background: var(--ng-light);
+    border: var(--ng-border);
+    padding: 1.5rem;
+    box-shadow: var(--ng-shadow);
+    transform: rotate(1deg);
+}
+
+.ng-cta-group {
+    display: flex;
+    gap: 2rem;
+}
+
+.ng-btn-primary,
+.ng-btn-secondary {
+    padding: 1.2rem 3rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: var(--ng-border);
+    box-shadow: var(--ng-shadow);
+    transition: all 0.2s ease;
+}
+
+.ng-btn-primary {
+    background: var(--ng-primary);
+    color: var(--ng-light);
+}
+
+.ng-btn-primary:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px var(--ng-dark);
+    background: #ff6b81;
+}
+
+.ng-btn-secondary {
+    background: var(--ng-light);
+    color: var(--ng-dark);
+}
+
+.ng-btn-secondary:hover {
+    background: var(--ng-secondary);
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px var(--ng-dark);
+}
+
+/* --- Features Section --- */
+.ng-features {
+    padding: 8rem 2rem;
+    background: var(--ng-dark);
+    color: var(--ng-light);
+    position: relative;
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    margin-top: -5vh;
+}
+
+.ng-section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.ng-section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: var(--ng-accent);
+    margin-bottom: 1rem;
+}
+
+.ng-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ng-feature-card {
+    background: var(--ng-light);
+    border: var(--ng-border);
+    padding: 2rem;
+    color: var(--ng-dark);
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.ng-feature-card:hover {
+    transform: rotate(2deg) scale(1.05);
+    z-index: 2;
+}
+
+.ng-feature-card:nth-child(even) {
+    transform: rotate(-1deg);
+}
+
+.ng-feature-card:nth-child(even):hover {
+    transform: rotate(-3deg) scale(1.05);
+}
+
+.ng-icon-box {
+    width: 60px;
+    height: 60px;
+    background: var(--ng-secondary);
+    border: var(--ng-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 4px 4px 0px var(--ng-dark);
+}
+
+.ng-feature-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.ng-feature-card p {
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* --- Footer --- */
+.ng-footer {
+    padding: 6rem 2rem 2rem;
+    background: var(--ng-accent);
+    text-align: center;
+    border-top: var(--ng-border);
+}
+
+.ng-footer h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5rem;
+    color: var(--ng-light);
+    text-shadow: 4px 4px 0px var(--ng-dark);
+    margin-bottom: 2rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .ng-title {
+        font-size: 3.5rem;
+    }
+
+    .ng-header-group {
+        width: 100%;
+    }
+
+    .ng-cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .ng-description {
+        font-size: 1.1rem;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ng-nav-links {
+        display: none;
+    }
+}
+/* --- Menu Section --- */
+.ng-menu {
+    padding: 6rem 2rem;
+    background-color: var(--ng-off-white);
+}
+
+.ng-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ng-menu-card {
+    background: var(--ng-light);
+    border: var(--ng-border);
+    padding: 0;
+    position: relative;
+    transition: transform 0.3s;
+    box-shadow: 6px 6px 0px var(--ng-accent);
+}
+
+.ng-menu-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0px var(--ng-accent);
+}
+
+.ng-menu-img {
+    height: 200px;
+    width: 100%;
+    background-color: #ddd;
+    border-bottom: var(--ng-border);
+    object-fit: cover;
+}
+
+.ng-menu-content {
+    padding: 1.5rem;
+}
+
+.ng-menu-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.ng-menu-price {
+    font-weight: 800;
+    color: var(--ng-primary);
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* --- Testimonials --- */
+.ng-testimonials {
+    padding: 6rem 2rem;
+    background: radial-gradient(circle at 30% 50%, #fff 20%, #f0fdf4 80%);
+    border-top: var(--ng-border);
+    border-bottom: var(--ng-border);
+}
+
+.ng-testi-card {
+    background: var(--ng-light);
+    border: var(--ng-border);
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    box-shadow: 8px 8px 0px var(--ng-secondary);
+    position: relative;
+}
+
+.ng-quote {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    color: var(--ng-secondary);
+    line-height: 0.5;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.ng-testi-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.ng-testi-author {
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--ng-primary);
+}
+
+/* --- Contact / Booking --- */
+.ng-contact {
+    padding: 6rem 2rem;
+    background-color: var(--ng-off-white);
+    text-align: center;
+}
+
+.ng-booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border: var(--ng-border);
+    padding: 3rem;
+    background: var(--ng-light);
+    box-shadow: 12px 12px 0px var(--ng-dark);
+}
+
+.ng-input {
+    width: 100%;
+    padding: 1rem;
+    border: 3px solid var(--ng-dark);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    background: #f8f9fa;
+}
+
+.ng-input:focus {
+    outline: none;
+    background: #fff;
+    border-color: var(--ng-primary);
+}
+
+.ng-form-btn {
+    padding: 1rem;
+    background: var(--ng-dark);
+    color: var(--ng-light);
+    border: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.ng-form-btn:hover {
+    background: var(--ng-primary);
+}
+
