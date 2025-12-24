@@ -1,0 +1,276 @@
+/* Import Google Fonts used in the design style */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@400;500&display=swap');
+
+.design-2-root {
+    --color-primary-yellow: #F4D06F;
+    /* The navbar color */
+    --color-bg-cream: #FFF8E7;
+    /* The main body background */
+    --color-text-brown: #4A2C2A;
+    /* The dark brown text and footer bg */
+    --color-text-light: #ffffff;
+    /* White text for buttons/footer */
+
+    --font-heading: 'Merriweather', serif;
+    --font-body: 'Roboto', sans-serif;
+
+    --section-padding: 60px 20px;
+    --content-max-width: 1200px;
+
+    font-family: var(--font-body);
+    background-color: var(--color-bg-cream);
+    color: var(--color-text-brown);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.design-2-root * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Reusable Utility Classes --- */
+.design-2-root .container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.design-2-root .btn {
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-body);
+}
+
+.design-2-root .btn-brown {
+    background-color: var(--color-text-brown);
+    color: var(--color-text-light);
+}
+
+.design-2-root .btn-brown:hover {
+    background-color: #3a2220;
+    /* Slightly darker on hover */
+}
+
+
+/* --- Header Image Banner --- */
+.design-2-root .header-banner-img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    /* Adjust based on your actual image preference */
+    object-fit: cover;
+    display: block;
+    border-bottom: 2px solid var(--color-primary-yellow);
+}
+
+/* --- Navbar --- */
+.design-2-root .navbar {
+    background-color: var(--color-primary-yellow);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.design-2-root .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.design-2-root .logo {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--color-text-brown);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.design-2-root .logo span {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-brown);
+    /* "Family Restaurant" stays brown */
+}
+
+.design-2-root .logo span.logo-naram {
+    color: #0097e6 !important;
+    /* Blue/Cyan */
+}
+
+.design-2-root .logo span.logo-garam {
+    color: #e84118 !important;
+    /* Red/Pink */
+}
+
+
+.design-2-root .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.design-2-root .nav-links a {
+    text-decoration: none;
+    color: var(--color-text-brown);
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+
+/* --- Hero Section --- */
+.design-2-root .hero-section {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.design-2-root .hero-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    color: var(--color-text-brown);
+}
+
+.design-2-root .hero-subtitle {
+    font-size: 1.3rem;
+    color: #6b4f4d;
+    /* Slightly lighter brown for subtitle */
+}
+
+
+/* --- Features Section --- */
+.design-2-root .features-section {
+    padding: var(--section-padding);
+}
+
+.design-2-root .features-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    text-align: left;
+}
+
+.design-2-root .feature-card {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.design-2-root .feature-icon-wrapper {
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.design-2-root .feature-icon {
+    font-size: 2.5rem;
+    color: var(--color-text-brown);
+}
+
+.design-2-root .feature-content h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.design-2-root .feature-content p {
+    font-size: 0.95rem;
+    color: #6b4f4d;
+    max-width: 300px;
+}
+
+
+/* --- CTA Section --- */
+.design-2-root .cta-section {
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+
+/* --- Footer --- */
+.design-2-root .footer {
+    background-color: var(--color-text-brown);
+    color: var(--color-text-light);
+    padding: 30px 0;
+}
+
+.design-2-root .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.design-2-root .contact-info h4 {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.design-2-root .contact-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.design-2-root .social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.design-2-root .social-icon {
+    color: var(--color-text-light);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.design-2-root .social-icon:hover {
+    opacity: 0.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .design-2-root .navbar-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .design-2-root .nav-links {
+        gap: 15px;
+    }
+
+    .design-2-root .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .design-2-root .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .design-2-root .feature-card {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .design-2-root .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
