@@ -1,0 +1,635 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.prasadam-d2-root {
+    --primary-orange: #f97316;
+    --primary-orange-hover: #ea580c;
+    /* darker orange */
+    --secondary-green: #16a34a;
+    --dark-green: #15803d;
+    --bg-light: #f9fafb;
+    /* gray-50 */
+    --text-dark: #1f2937;
+    /* gray-800 */
+    --text-gray: #4b5563;
+    /* gray-600 */
+    --white: #ffffff;
+
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+.prasadam-d2-root * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.prasadam-d2-root a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.prasadam-d2-root ul {
+    list-style: none;
+}
+
+.prasadam-d2-root img {
+    max-width: 100%;
+    display: block;
+}
+
+/* --- Utilities --- */
+.prasadam-d2-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+    /* px-4 */
+}
+
+@media (min-width: 640px) {
+    .prasadam-d2-container {
+        padding: 0 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .prasadam-d2-container {
+        padding: 0 32px;
+    }
+}
+
+.prasadam-d2-btn-primary {
+    background-color: var(--primary-orange);
+    color: var(--white);
+    padding: 8px 24px;
+    border-radius: 9999px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.prasadam-d2-btn-primary:hover {
+    background-color: var(--primary-orange-hover);
+}
+
+.prasadam-d2-btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--primary-orange);
+    color: var(--primary-orange);
+    padding: 10px 32px;
+    border-radius: 9999px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.prasadam-d2-btn-outline:hover {
+    background-color: var(--primary-orange);
+    color: var(--white);
+}
+
+/* --- Navbar --- */
+.prasadam-d2-navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.prasadam-d2-nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    /* h-20 */
+}
+
+.prasadam-d2-logo-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.prasadam-d2-logo-icon {
+    background-color: var(--white);
+    border: 2px solid var(--primary-orange);
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-green);
+}
+
+.prasadam-d2-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.prasadam-d2-brand {
+    font-size: 1.5rem;
+    /* text-2xl */
+    font-weight: 700;
+    color: var(--primary-orange);
+    line-height: 1;
+}
+
+.prasadam-d2-tagline {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--secondary-green);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.prasadam-d2-nav-links {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .prasadam-d2-nav-links {
+        display: flex;
+        gap: 32px;
+        /* space-x-8 */
+        color: var(--text-gray);
+        font-weight: 500;
+    }
+
+    .prasadam-d2-nav-links a:hover {
+        color: var(--primary-orange);
+    }
+}
+
+/* --- Hero --- */
+.prasadam-d2-hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prasadam-d2-hero-bg {
+    position: absolute;
+    inset: 0;
+}
+
+.prasadam-d2-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prasadam-d2-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.prasadam-d2-hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: var(--white);
+    padding: 0 16px;
+    max-width: 896px;
+    /* max-w-4xl */
+    margin-top: 64px;
+}
+
+.prasadam-d2-hero-content h1 {
+    font-size: 3rem;
+    /* text-5xl */
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+    .prasadam-d2-hero-content h1 {
+        font-size: 4.5rem;
+        /* text-7xl */
+    }
+}
+
+.prasadam-d2-hero-content p {
+    font-size: 1.25rem;
+    /* text-xl */
+    margin-bottom: 32px;
+    font-weight: 300;
+    color: #e5e7eb;
+    /* gray-200 */
+}
+
+@media (min-width: 768px) {
+    .prasadam-d2-hero-content p {
+        font-size: 1.5rem;
+        /* text-2xl */
+    }
+}
+
+.prasadam-d2-hero-btn {
+    font-size: 1.125rem;
+    /* text-lg */
+    padding: 12px 32px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- Offerings Grid --- */
+.prasadam-d2-section {
+    padding: 80px 0;
+    /* py-20 */
+}
+
+.prasadam-d2-bg-light {
+    background-color: var(--bg-light);
+}
+
+.prasadam-d2-section-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.prasadam-d2-section-header h2 {
+    font-size: 1.875rem;
+    /* text-3xl */
+    font-weight: 700;
+    color: var(--dark-green);
+    margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+    .prasadam-d2-section-header h2 {
+        font-size: 2.25rem;
+        /* text-4xl */
+    }
+}
+
+.prasadam-d2-divider {
+    width: 96px;
+    height: 4px;
+    background-color: var(--primary-orange);
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+.prasadam-d2-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 768px) {
+    .prasadam-d2-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .prasadam-d2-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.prasadam-d2-card {
+    cursor: pointer;
+}
+
+.prasadam-d2-card:hover h3 {
+    color: var(--primary-orange);
+}
+
+.prasadam-d2-card-img {
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    height: 256px;
+    /* h-64 */
+}
+
+.prasadam-d2-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.prasadam-d2-card:hover .prasadam-d2-card-img img {
+    transform: scale(1.1);
+}
+
+.prasadam-d2-card h3 {
+    font-size: 1.25rem;
+    /* text-xl */
+    font-weight: 700;
+    text-align: center;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+/* --- About --- */
+.prasadam-d2-about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .prasadam-d2-about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.prasadam-d2-about-text {
+    order: 2;
+}
+
+@media (min-width: 1024px) {
+    .prasadam-d2-about-text {
+        order: 1;
+    }
+}
+
+.prasadam-d2-about-text h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--dark-green);
+    margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+    .prasadam-d2-about-text h2 {
+        font-size: 2.25rem;
+    }
+}
+
+.prasadam-d2-about-text p {
+    color: var(--text-gray);
+    line-height: 1.625;
+    margin-bottom: 24px;
+    font-size: 1.125rem;
+}
+
+.prasadam-d2-about-img {
+    order: 1;
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .prasadam-d2-about-img {
+        order: 2;
+    }
+}
+
+.prasadam-d2-about-img img {
+    position: relative;
+    z-index: 10;
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    width: 100%;
+}
+
+.prasadam-d2-blob-1 {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    width: 96px;
+    height: 96px;
+    background-color: #ffedd5;
+    /* orange-100 */
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.prasadam-d2-blob-2 {
+    position: absolute;
+    bottom: -16px;
+    left: -16px;
+    width: 128px;
+    height: 128px;
+    background-color: #f0fdf4;
+    /* green-50 */
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* --- Footer --- */
+.prasadam-d2-footer {
+    background-color: #ea580c;
+    /* orange-600 */
+    color: var(--white);
+    padding-top: 64px;
+    padding-bottom: 32px;
+}
+
+.prasadam-d2-footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+    .prasadam-d2-footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.prasadam-d2-footer-col h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #ffedd5;
+    /* orange-100 */
+}
+
+.prasadam-d2-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.prasadam-d2-contact-list div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.prasadam-d2-contact-list svg {
+    color: #fed7aa;
+    /* orange-200 */
+}
+
+.prasadam-d2-footer-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.prasadam-d2-footer-col ul a:hover {
+    color: #fed7aa;
+}
+
+.prasadam-d2-socials {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.prasadam-d2-socials a {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.prasadam-d2-socials a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.prasadam-d2-footer-note {
+    font-size: 0.875rem;
+    color: #fed7aa;
+}
+
+.prasadam-d2-copyright {
+    padding-top: 32px;
+    border-top: 1px solid rgba(249, 115, 22, 0.5);
+    /* orange-500/50 */
+    text-align: center;
+    color: #fed7aa;
+    font-size: 0.875rem;
+}
+/* --- Testimonials --- */
+.prasadam-d2-testimonials {
+    background-color: var(--white);
+    padding: 80px 0;
+}
+
+.prasadam-d2-testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 768px) {
+    .prasadam-d2-testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .prasadam-d2-testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.prasadam-d2-testimonial-card {
+    background-color: var(--bg-light);
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.prasadam-d2-stars {
+    color: #fbbf24; /* amber-400 */
+    display: flex;
+    gap: 4px;
+}
+
+.prasadam-d2-testimonial-text {
+    color: var(--text-gray);
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.prasadam-d2-testimonial-author {
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-top: auto;
+}
+
+/* --- Contact Section --- */
+.prasadam-d2-contact-section {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.prasadam-d2-contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.prasadam-d2-form-group {
+    margin-bottom: 24px;
+}
+
+.prasadam-d2-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.prasadam-d2-input, 
+.prasadam-d2-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e5e7eb; /* gray-200 */
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    outline: none;
+    font-family: inherit;
+}
+
+.prasadam-d2-input:focus,
+.prasadam-d2-textarea:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.1);
+}
+
+.prasadam-d2-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.prasadam-d2-form-btn {
+    width: 100%;
+    background-color: var(--primary-orange);
+    color: var(--white);
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prasadam-d2-form-btn:hover {
+    background-color: var(--primary-orange-hover);
+}
