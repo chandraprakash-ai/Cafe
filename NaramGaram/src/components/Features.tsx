@@ -4,7 +4,7 @@ import './NaramGaram.css';
 
 const Features: React.FC = () => {
     return (
-        <section className="features-section container" id="about">
+        <section className="features-section container">
             <div className="features-grid">
                 {/* Feature 1 */}
                 <div className="feature-card">

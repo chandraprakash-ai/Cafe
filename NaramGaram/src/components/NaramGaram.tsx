@@ -4,7 +4,8 @@ import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 import Hero from './Hero';
 import Features from './Features';
-import CTA from './CTA';
+import About from './About';
+import Menu from './Menu';
 import Footer from './Footer';
 
 const NaramGaramPage2: React.FC = () => {
@@ -22,7 +23,8 @@ const NaramGaramPage2: React.FC = () => {
             <main>
                 <Hero />
                 <Features />
-                <CTA />
+                <About />
+                <Menu />
             </main>
             <Footer />
         </div>
