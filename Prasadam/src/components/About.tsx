@@ -7,12 +7,12 @@ const About: React.FC = () => {
             <div className="prasadam-d2-container">
                 <div className="prasadam-d2-about-grid">
                     <div className="prasadam-d2-about-text">
-                        <h2>About Prasadam</h2>
+                        <h2>About Tangerine Cafe</h2>
                         <div style={{ marginBottom: '24px' }}>
                             <div className="prasadam-d2-divider" style={{ margin: '0 0 16px 0', width: '64px' }}></div>
                         </div>
                         <p>
-                            Prasadam is more than just a restaurant; it is a destination for food lovers who seek authenticity.
+                            Tangerine Cafe is more than just a restaurant; it is a destination for food lovers who seek authenticity.
                             Located in the heart of the city, we serve dishes that honor traditional recipes while embracing modern culinary techniques.
                         </p>
                         <p>
@@ -28,7 +28,7 @@ const About: React.FC = () => {
                         <div className="prasadam-d2-blob-2"></div>
                         <img
                             src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1000&q=80"
-                            alt="Prasadam Interior"
+                            alt="Tangerine Cafe Interior"
                         />
                     </div>
                 </div>

@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="prasadam-d2-hero-content">
-                <h1>Welcome to Prasadam</h1>
+                <h1>Welcome to Tangerine Cafe</h1>
                 <p>
                     Experience the fusion of tradition and taste. Where every dish is crafted with passion and every flavor tells a story.
                 </p>

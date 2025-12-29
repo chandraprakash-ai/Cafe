@@ -11,7 +11,7 @@ const Testimonials: React.FC = () => {
         },
         {
             name: "Rajesh Kumar",
-            text: "Prasadam never disappoints. The Thali is a must-try! It reminded me of my grandmother's cooking.",
+            text: "Tangerine Cafe never disappoints. The Thali is a must-try! It reminded me of my grandmother's cooking.",
             stars: 5
         },
         {

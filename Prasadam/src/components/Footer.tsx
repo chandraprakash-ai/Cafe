@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
                         <div className="prasadam-d2-contact-list">
                             <div><Phone size={18} /> <span>+91 9226835780</span></div>
                             <div><Phone size={18} /> <span>+91 9926687783</span></div>
-                            <div><Mail size={18} /> <span>info@prasadam.com</span></div>
+                            <div><Mail size={18} /> <span>info@tangerine.com</span></div>
                         </div>
                     </div>
 
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
                 </div>
 
                 <div className="prasadam-d2-copyright">
-                    <p>© 2025 Prasadam. All rights reserved. | Design by Chandraprakash</p>
+                    <p>© 2025 Tangerine Cafe. All rights reserved. | Designed by Chandraprakash</p>
                 </div>
             </div>
         </footer>

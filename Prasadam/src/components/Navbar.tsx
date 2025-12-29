@@ -1,5 +1,5 @@
 import React from 'react';
-import { UtensilsCrossed } from 'lucide-react';
+import TangerineIcon from './TangerineIcon';
 import './Prasadam.css';
 
 const Navbar: React.FC = () => {
@@ -10,10 +10,10 @@ const Navbar: React.FC = () => {
                     {/* Logo Area */}
                     <div className="prasadam-d2-logo-area">
                         <div className="prasadam-d2-logo-icon">
-                            <UtensilsCrossed size={24} />
+                            <TangerineIcon size={24} />
                         </div>
                         <div className="prasadam-d2-logo-text">
-                            <span className="prasadam-d2-brand">Prasadam</span>
+                            <span className="prasadam-d2-brand">Tangerine Cafe</span>
                             <span className="prasadam-d2-tagline">WHERE FLAVOR TELLS A STORY</span>
                         </div>
                     </div>
